@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+<body background="img/background.jpg">
+    <div id="sidebar">
+        <div id="logoBackground">
+            <!-- <img src="#" alt="logo"> -->
+        </div>
+    </div>
+    <form action="#">
+        <div id="topForm">
+            <h2>This is note a real online Service! You know you need something like this in your life to help you realise your deepest dreams.</h2>
+            <h2>Sign up now to get started.</h2>
+        </div>
+        <div id="middleForm">
+        <h2>Let's do this!</h2>
+            <div id="inputGrid">
+                <div class="inputDiv">
+                    <label for="firstName">FIRST NAME</label>
+                    <input type="text" name="firstName" id="firstName" required>
+                </div>
+                <div class="inputDiv">
+                    <label for="lastName">LAST NAME</label>
+                    <input type="text" name="lastName" id="lastName" required>
+                </div>
+                <div class="inputDiv">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="inputDiv">
+                    <label for="phone">PHONE</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div class="inputDiv">
+                    <label for="initPassword">PASSWORD</label>
+                    <input type="password" name="initPassword" id="initPassword" required>
+                </div>
+                <div class="inputDiv">
+                    <label for="confPassword">CONFIRM PASSWORD</label>
+                    <input type="password" name="confPassword" id="confPassword" required>
+                    <span id="confPasswordMsg"></span>
+                </div>
+            </div>
+        </div>
+        <div id="bottomForm">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </form>
+</body>
+</html>
