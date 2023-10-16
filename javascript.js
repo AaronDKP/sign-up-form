@@ -1,12 +1,21 @@
+const init = document.querySelector("#initPassword");
+const conf = document.querySelector("#confPassword");
+
+conf.addEventListener('input', matchPassword);
+
 function matchPassword() {
-    let pw1 = document.getElementById("initPassword");
-    let pw2 = document.getElementById("confPassword");
-    let msg = document.getElementById("confPasswordMsg");
+    const pw1 = document.querySelector("#initPassword").value;
+    const pw2 = document.querySelector("#confPassword").value;
 
     if (pw1 != pw2) {
-        msg.textContent = 'Passwords do not match';
+        init.classList.remove("success");
+        init.classList.add("error");
+        conf.classList.remove("success");
+        conf.classList.add("error");
     } else {
-        msg.textContent = 'Password created successfully';
+        init.classList.remove("error");
+        init.classList.add("success");
+        conf.classList.remove("error");
+        conf.classList.add("success");
     }
 }
-

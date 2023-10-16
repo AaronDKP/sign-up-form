@@ -22,6 +22,23 @@ body{
     background-color: none;
 }
 
+#logoBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 200px;
+    height: 140px;
+}
+
+#logoBackground > h1 {
+    font-family: Pacifico;
+    color: #fff;
+    opacity: 1;
+    font-size: 2em;
+
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -83,6 +100,42 @@ input:focus {
     border-radius: 6px;
     outline: none;
     box-shadow: 0px 0px 3px #ccc;
+} 
+
+#initPassword:invalid, #confPassword:invalid {
+    border: 2px solid #880808;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0px 0px 3px #ccc;
+}
+
+#initPassword:valid.success, #confPassword:valid.success {
+    border: 2px solid #AFE1AF;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0px 0px 3px #ccc;
+}
+
+#confPassword:valid.success, #initPassword:valid.success + span::before {
+    content: "✔ Passwords Match";
+    color: #AFE1AF;
+}
+
+#initPassword:invalid + span::before {
+    content: "*Password does not meet requirements";
+    color: #880808;
+}
+
+#initPassword:valid.error + span::before {
+    content: "*Passwords do not match";
+    color: #880808;
+}
+
+
+
+span {
+    font-size: 0.8em;
+    font-weight: 600;
 }
 
 button {
@@ -113,11 +166,4 @@ a {
 
 a:hover {
     color: #779160;
-}
-
-#logoBackground {
-    background-color: #000;
-    opacity: 0.3;
-    margin-top: 200px;
-    height: 140px;
 }

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 </head>
 <body background="img/background.jpg">
     <div id="sidebar">
         <div id="logoBackground">
-            <!-- <img src="#" alt="logo"> -->
+            <h1>not a real website</h1>
         </div>
     </div>
     <form action="#">
@@ -22,11 +22,11 @@
         <h2>Let's do this!</h2>
             <div id="inputGrid">
                 <div class="inputDiv">
-                    <label for="firstName">FIRST NAME</label>
+                    <label for="firstName">FIRST NAME *</label>
                     <input type="text" name="firstName" id="firstName" required>
                 </div>
                 <div class="inputDiv">
-                    <label for="lastName">LAST NAME</label>
+                    <label for="lastName">LAST NAME *</label>
                     <input type="text" name="lastName" id="lastName" required>
                 </div>
                 <div class="inputDiv">
@@ -38,12 +38,13 @@
                     <input type="tel" name="phone" id="phone">
                 </div>
                 <div class="inputDiv">
-                    <label for="initPassword">PASSWORD</label>
-                    <input type="password" name="initPassword" id="initPassword" required>
+                    <label for="initPassword" id="initLabel">PASSWORD *</label>
+                    <input type="password" name="initPassword" id="initPassword" pattern="(^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$)" required>
+                    <span></span>
                 </div>
                 <div class="inputDiv">
-                    <label for="confPassword">CONFIRM PASSWORD</label>
-                    <input type="password" name="confPassword" id="confPassword" required>
+                    <label for="confPassword">CONFIRM PASSWORD *</label>
+                    <input type="password" name="confPassword" id="confPassword" pattern="(^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8}$)" required>
                     <span id="confPasswordMsg"></span>
                 </div>
             </div>
